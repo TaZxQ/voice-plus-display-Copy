@@ -1,0 +1,2281 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Wimbledon Voice+ 2026</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+  <style>
+
+    :root {
+
+      --navy: #0b1d2a;
+
+      --teal: #17beb3;
+
+      --teal-dark: #079b92;
+
+      --mint: #dff8f5;
+
+      --light: #f7ffff;
+
+      --grey: #45464b;
+
+      --white: #ffffff;
+
+    }
+
+
+
+    * {
+
+      box-sizing: border-box;
+
+    }
+
+
+
+    html,
+
+    body {
+
+      margin: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      overflow: hidden;
+
+      font-family: Arial, Helvetica, sans-serif;
+
+      background: var(--light);
+
+      color: var(--navy);
+
+    }
+
+
+
+    /* ===============================
+
+       MAIN TV SCREEN
+
+    =============================== */
+
+
+
+    .screen {
+
+      width: 100vw;
+
+      height: 100vh;
+
+      position: relative;
+
+      overflow: hidden;
+
+      display: flex;
+
+      flex-direction: column;
+
+
+
+      background:
+
+        linear-gradient(
+
+          125deg,
+
+          #ffffff 0%,
+
+          #ffffff 51%,
+
+          #e8faf8 51.2%,
+
+          #e8faf8 62%,
+
+          #19bdb2 62.2%,
+
+          #35cec3 100%
+
+        );
+
+    }
+
+
+
+    /* Background decoration */
+
+
+
+    .shape-top {
+
+      position: absolute;
+
+      width: 40vw;
+
+      height: 55vh;
+
+      right: -15vw;
+
+      top: -35vh;
+
+      background: rgba(0, 139, 132, 0.22);
+
+      transform: rotate(-28deg);
+
+    }
+
+
+
+    .shape-right {
+
+      position: absolute;
+
+      width: 38vw;
+
+      height: 55vh;
+
+      right: -20vw;
+
+      bottom: -30vh;
+
+      background: rgba(0, 124, 117, 0.18);
+
+      transform: rotate(28deg);
+
+    }
+
+
+
+    .shape-middle {
+
+      position: absolute;
+
+      width: 18vw;
+
+      height: 120vh;
+
+      right: 27vw;
+
+      top: -30vh;
+
+      background: rgba(255,255,255,0.15);
+
+      transform: rotate(32deg);
+
+    }
+
+
+
+    .bottom-circle {
+
+      position: absolute;
+
+      width: 400px;
+
+      height: 400px;
+
+      left: -280px;
+
+      bottom: -250px;
+
+      border-radius: 50%;
+
+      background: #35c9bf;
+
+    }
+
+
+
+    /* ===============================
+
+       HEADER
+
+    =============================== */
+
+
+
+    header {
+
+      height: 13vh;
+
+      min-height: 90px;
+
+      width: 100%;
+
+      padding: 2.5vh 3.5vw;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: flex-end;
+
+
+
+      position: relative;
+
+      z-index: 10;
+
+    }
+
+
+
+    /* OCADO LOGO */
+
+
+
+    .ocado-brand {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 17px;
+
+    }
+
+
+
+    .ocado-circle {
+
+      width: 74px;
+
+      height: 74px;
+
+
+
+      border-radius: 50%;
+
+
+
+      background:
+
+        linear-gradient(
+
+          135deg,
+
+          #58d8cf,
+
+          #20c2b7
+
+        );
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+
+
+      box-shadow:
+
+        0 6px 18px rgba(0,0,0,0.04);
+
+    }
+
+
+
+    /* white arrow inside circle */
+
+
+
+    .ocado-chevron {
+
+      width: 28px;
+
+      height: 28px;
+
+
+
+      border-top: 10px solid white;
+
+      border-right: 10px solid white;
+
+
+
+      transform: rotate(45deg);
+
+
+
+      margin-left: -8px;
+
+    }
+
+
+
+    .ocado-wordmark {
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+
+
+      color: #424348;
+
+    }
+
+
+
+    .ocado-name {
+
+      font-size: 53px;
+
+      font-weight: 700;
+
+
+
+      letter-spacing: -3px;
+
+      line-height: 0.78;
+
+    }
+
+
+
+    .ocado-logistics {
+
+      font-size: 28px;
+
+      font-weight: 300;
+
+
+
+      letter-spacing: 1px;
+
+      line-height: 1;
+
+
+
+      margin-top: 11px;
+
+    }
+
+
+
+    /* Wimbledon badge */
+
+
+
+    .location {
+
+      background: var(--navy);
+
+      color: white;
+
+
+
+      padding: 14px 27px;
+
+
+
+      border-radius: 40px;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+
+
+      font-size: 18px;
+
+      font-weight: 800;
+
+
+
+      box-shadow:
+
+        0 8px 25px rgba(0,0,0,0.12);
+
+    }
+
+
+
+    .location-dot {
+
+      color: #2ad0c4;
+
+      font-size: 22px;
+
+    }
+
+
+
+    /* ===============================
+
+       MAIN CONTENT
+
+    =============================== */
+
+
+
+    main {
+
+      flex: 1;
+
+
+
+      width: 100%;
+
+
+
+      display: grid;
+
+      grid-template-columns: 55% 45%;
+
+
+
+      position: relative;
+
+      z-index: 5;
+
+    }
+
+
+
+    /* ===============================
+
+       LEFT SIDE
+
+    =============================== */
+
+
+
+    .left {
+
+      padding:
+
+        2vh
+
+        2vw
+
+        2vh
+
+        4vw;
+
+
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: center;
+
+    }
+
+
+
+    .eyebrow {
+
+      font-size: clamp(16px, 1.25vw, 23px);
+
+
+
+      letter-spacing: 10px;
+
+
+
+      font-weight: 800;
+
+
+
+      margin-bottom: 2vh;
+
+    }
+
+
+
+    .voice {
+
+      margin: 0;
+
+
+
+      font-size: clamp(115px, 11vw, 205px);
+
+
+
+      line-height: 0.72;
+
+
+
+      font-weight: 900;
+
+
+
+      letter-spacing: -10px;
+
+
+
+      color: var(--navy);
+
+    }
+
+
+
+    .voice span {
+
+      color: var(--teal);
+
+    }
+
+
+
+    .strapline {
+
+      margin-top: 3vh;
+
+
+
+      font-size: clamp(16px, 1.35vw, 26px);
+
+
+
+      letter-spacing: 7px;
+
+
+
+      font-weight: 700;
+
+    }
+
+
+
+    .divider {
+
+      color: var(--teal);
+
+
+
+      margin:
+
+        0
+
+        16px;
+
+    }
+
+
+
+    /* Launch banner */
+
+
+
+    .launch {
+
+      margin-top: 3vh;
+
+
+
+      width: fit-content;
+
+
+
+      padding:
+
+        1.8vh
+
+        2vw;
+
+
+
+      border-radius: 18px;
+
+
+
+      color: white;
+
+
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          #079f96,
+
+          #24c9bd
+
+        );
+
+
+
+      font-size:
+
+        clamp(
+
+          30px,
+
+          3vw,
+
+          58px
+
+        );
+
+
+
+      font-weight: 900;
+
+
+
+      box-shadow:
+
+        0 14px 35px
+
+        rgba(0, 166, 156, 0.20);
+
+
+
+      animation:
+
+        softGlow
+
+        3s
+
+        ease-in-out
+
+        infinite;
+
+    }
+
+
+
+    @keyframes softGlow {
+
+
+
+      0%,
+
+      100% {
+
+        box-shadow:
+
+          0 14px 35px
+
+          rgba(0,166,156,0.20);
+
+      }
+
+
+
+      50% {
+
+        box-shadow:
+
+          0 14px 45px
+
+          rgba(0,185,173,0.38);
+
+      }
+
+    }
+
+
+
+    /* Dates */
+
+
+
+    .dates {
+
+      margin-top: 2.7vh;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+
+
+      gap: 2vw;
+
+    }
+
+
+
+    .calendar {
+
+      width: 155px;
+
+      height: 130px;
+
+
+
+      background: white;
+
+
+
+      border:
+
+        3px
+
+        solid
+
+        var(--teal);
+
+
+
+      border-radius: 16px;
+
+
+
+      overflow: hidden;
+
+
+
+      text-align: center;
+
+
+
+      box-shadow:
+
+        0 10px 30px
+
+        rgba(0,0,0,0.08);
+
+    }
+
+
+
+    .calendar-head {
+
+      height: 38px;
+
+
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          #079f96,
+
+          #24c9bd
+
+        );
+
+
+
+      color: white;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+
+
+      font-size: 18px;
+
+
+
+      font-weight: 900;
+
+    }
+
+
+
+    .calendar-number {
+
+      height: 90px;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+
+
+      font-size: 65px;
+
+
+
+      font-weight: 900;
+
+    }
+
+
+
+    .to {
+
+      font-size: 35px;
+
+
+
+      font-weight: 900;
+
+    }
+
+
+
+    /* ===============================
+
+       RIGHT SIDE
+
+    =============================== */
+
+
+
+    .right {
+
+      position: relative;
+
+
+
+      padding:
+
+        2vh
+
+        4vw
+
+        2vh
+
+        1vw;
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+
+    /* Decorative speech bubbles */
+
+
+
+    .bubble {
+
+      position: absolute;
+
+
+
+      border-radius: 25px;
+
+
+
+      background:
+
+        rgba(255,255,255,0.18);
+
+    }
+
+
+
+    .bubble.one {
+
+      width: 180px;
+
+      height: 95px;
+
+
+
+      right: 10%;
+
+      top: 6%;
+
+    }
+
+
+
+    .bubble.two {
+
+      width: 100px;
+
+      height: 60px;
+
+
+
+      right: 35%;
+
+      top: 13%;
+
+    }
+
+
+
+    /* Main card */
+
+
+
+    .message-card {
+
+      width: 100%;
+
+      max-width: 720px;
+
+
+
+      background:
+
+        rgba(255,255,255,0.97);
+
+
+
+      border-radius: 28px;
+
+
+
+      padding:
+
+        3vh
+
+        2.5vw;
+
+
+
+      box-shadow:
+
+        0 22px 60px
+
+        rgba(0,0,0,0.16);
+
+
+
+      position: relative;
+
+
+
+      z-index: 5;
+
+    }
+
+
+
+    .message-card::before {
+
+      content: "";
+
+
+
+      position: absolute;
+
+
+
+      top: 0;
+
+      left: 35px;
+
+
+
+      width: 120px;
+
+      height: 7px;
+
+
+
+      border-radius:
+
+        0
+
+        0
+
+        10px
+
+        10px;
+
+
+
+      background:
+
+        var(--teal);
+
+    }
+
+
+
+    /* Have your say */
+
+
+
+    .card-title {
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      gap: 20px;
+
+
+
+      margin-bottom: 2.2vh;
+
+    }
+
+
+
+    .megaphone {
+
+      width: 68px;
+
+      height: 68px;
+
+
+
+      min-width: 68px;
+
+
+
+      border-radius: 50%;
+
+
+
+      background:
+
+        linear-gradient(
+
+          135deg,
+
+          #079f96,
+
+          #27cabf
+
+        );
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+
+
+      color: white;
+
+
+
+      font-size: 32px;
+
+    }
+
+
+
+    .card-title h2 {
+
+      margin: 0;
+
+
+
+      font-size:
+
+        clamp(
+
+          35px,
+
+          3vw,
+
+          58px
+
+        );
+
+
+
+      line-height: 0.95;
+
+
+
+      font-weight: 900;
+
+    }
+
+
+
+    .card-title h2 span {
+
+      color: var(--teal);
+
+    }
+
+
+
+    /* Messages */
+
+
+
+    .message-row {
+
+      display: grid;
+
+
+
+      grid-template-columns:
+
+        55px
+
+        1fr;
+
+
+
+      gap: 16px;
+
+
+
+      align-items: center;
+
+
+
+      margin:
+
+        2vh
+
+        0;
+
+    }
+
+
+
+    .icon-circle {
+
+      width: 48px;
+
+      height: 48px;
+
+
+
+      border-radius: 50%;
+
+
+
+      background:
+
+        var(--mint);
+
+
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+
+
+      font-size: 25px;
+
+    }
+
+
+
+    .message-row p {
+
+      margin: 0;
+
+
+
+      font-size:
+
+        clamp(
+
+          17px,
+
+          1.35vw,
+
+          25px
+
+        );
+
+
+
+      line-height: 1.3;
+
+    }
+
+
+
+    .message-row strong {
+
+      color:
+
+        var(--teal-dark);
+
+    }
+
+
+
+    /* Final highlighted message */
+
+
+
+    .highlight {
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          #e4faf7,
+
+          #d6f5f1
+
+        );
+
+
+
+      padding:
+
+        1.5vh
+
+        1vw;
+
+
+
+      border-radius: 18px;
+
+
+
+      margin-top: 2.5vh;
+
+    }
+
+
+
+    /* ===============================
+
+       FOOTER
+
+    =============================== */
+
+
+
+    footer {
+
+      height: 13vh;
+
+
+
+      min-height: 105px;
+
+
+
+      width: 100%;
+
+
+
+      background:
+
+        linear-gradient(
+
+          90deg,
+
+          #071b28,
+
+          #102b39
+
+        );
+
+
+
+      color: white;
+
+
+
+      border-radius:
+
+        32px
+
+        32px
+
+        0
+
+        0;
+
+
+
+      display: grid;
+
+
+
+      grid-template-columns:
+
+        1fr
+
+        1fr
+
+        1fr
+
+        1fr
+
+        1.1fr;
+
+
+
+      align-items: center;
+
+
+
+      padding:
+
+        0
+
+        3vw;
+
+
+
+      position: relative;
+
+
+
+      z-index: 10;
+
+    }
+
+
+
+    .footer-item {
+
+      height: 55%;
+
+
+
+      display: flex;
+
+
+
+      align-items: center;
+
+
+
+      justify-content: center;
+
+
+
+      gap: 15px;
+
+
+
+      padding:
+
+        0
+
+        1vw;
+
+
+
+      border-right:
+
+        1px
+
+        solid
+
+        rgba(70,220,208,0.5);
+
+    }
+
+
+
+    .footer-icon {
+
+      font-size: 31px;
+
+    }
+
+
+
+    .footer-text {
+
+      font-size:
+
+        clamp(
+
+          12px,
+
+          1vw,
+
+          18px
+
+        );
+
+
+
+      line-height: 1.2;
+
+
+
+      font-weight: 800;
+
+    }
+
+
+
+    .footer-text::after {
+
+      content: "";
+
+
+
+      display: block;
+
+
+
+      width: 38px;
+
+      height: 4px;
+
+
+
+      margin-top: 8px;
+
+
+
+      background:
+
+        var(--teal);
+
+
+
+      border-radius: 5px;
+
+    }
+
+
+
+    .voice-footer {
+
+      text-align: center;
+
+
+
+      font-size:
+
+        clamp(
+
+          20px,
+
+          1.8vw,
+
+          32px
+
+        );
+
+
+
+      font-weight: 900;
+
+    }
+
+
+
+    .voice-footer::before {
+
+      content: "";
+
+
+
+      display: block;
+
+
+
+      width: 32px;
+
+      height: 5px;
+
+
+
+      margin:
+
+        0
+
+        auto
+
+        10px;
+
+
+
+      background:
+
+        var(--teal);
+
+
+
+      border-radius: 10px;
+
+    }
+
+
+
+    /* ===============================
+
+       TV RESPONSIVE
+
+    =============================== */
+
+
+
+    @media (max-width: 1200px) {
+
+
+
+      .ocado-circle {
+
+        width: 58px;
+
+        height: 58px;
+
+      }
+
+
+
+      .ocado-chevron {
+
+        width: 22px;
+
+        height: 22px;
+
+
+
+        border-width:
+
+          8px
+
+          8px
+
+          0
+
+          0;
+
+      }
+
+
+
+      .ocado-name {
+
+        font-size: 40px;
+
+      }
+
+
+
+      .ocado-logistics {
+
+        font-size: 22px;
+
+      }
+
+
+
+      .calendar {
+
+        width: 130px;
+
+        height: 115px;
+
+      }
+
+
+
+      .calendar-number {
+
+        font-size: 52px;
+
+        height: 75px;
+
+      }
+
+
+
+      .message-card {
+
+        padding:
+
+          2.5vh
+
+          2vw;
+
+      }
+
+    }
+
+
+
+  </style>
+
+</head>
+
+
+
+
+
+<body>
+
+
+
+<div class="screen">
+
+
+
+  <!-- Background -->
+
+
+
+  <div class="shape-top"></div>
+
+  <div class="shape-right"></div>
+
+  <div class="shape-middle"></div>
+
+  <div class="bottom-circle"></div>
+
+
+
+
+
+  <!-- HEADER -->
+
+
+
+  <header>
+    <!-- Site identification -->
+
+
+
+
+
+
+    <!-- LOCATION -->
+
+
+
+    <div class="location">
+
+
+
+      <span class="location-dot">
+
+        ●
+
+      </span>
+
+
+
+      WIMBLEDON
+
+
+
+    </div>
+
+
+
+  </header>
+
+
+
+
+
+  <!-- MAIN CONTENT -->
+
+
+
+  <main>
+
+
+
+
+
+    <!-- LEFT -->
+
+
+
+    <section class="left">
+
+
+
+      <div class="eyebrow">
+
+        YOUR SITE. YOUR SAY.
+
+      </div>
+
+
+
+
+
+      <h1 class="voice">
+
+
+
+        Voice<span>+</span>
+
+
+
+      </h1>
+
+
+
+
+
+      <div class="strapline">
+
+
+
+        LISTEN
+
+
+
+        <span class="divider">
+
+          |
+
+        </span>
+
+
+
+        ACT
+
+
+
+        <span class="divider">
+
+          |
+
+        </span>
+
+
+
+        MAKE A DIFFERENCE
+
+
+
+      </div>
+
+
+
+
+
+      <div class="launch">
+
+
+
+        IT'S LIVE NOW!
+
+
+
+      </div>
+
+
+
+
+
+      <!-- DATES -->
+
+
+
+      <div class="dates">
+
+
+
+
+
+        <div class="calendar">
+
+
+
+          <div class="calendar-head">
+
+            OCTOBER
+
+          </div>
+
+
+
+          <div class="calendar-number">
+
+            7
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+        <div class="to">
+
+          TO
+
+        </div>
+
+
+
+
+
+        <div class="calendar">
+
+
+
+          <div class="calendar-head">
+
+            OCTOBER
+
+          </div>
+
+
+
+          <div class="calendar-number">
+
+            20
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+    <!-- RIGHT -->
+
+
+
+    <section class="right">
+
+
+
+      <div class="bubble one"></div>
+
+      <div class="bubble two"></div>
+
+
+
+
+
+      <div class="message-card">
+
+
+
+
+
+        <!-- TITLE -->
+
+
+
+        <div class="card-title">
+
+
+
+          <div class="megaphone">
+
+            📣
+
+          </div>
+
+
+
+          <h2>
+
+
+
+            Have
+
+            <span>your say!</span>
+
+
+
+          </h2>
+
+
+
+        </div>
+
+
+
+
+
+        <!-- MESSAGE 1 -->
+
+
+
+        <div class="message-row">
+
+
+
+          <div class="icon-circle">
+
+            💬
+
+          </div>
+
+
+
+          <p>
+
+
+
+            Come along to our dedicated
+
+            <strong>Voice+ area</strong>
+
+            and share your feedback with us.
+
+
+
+          </p>
+
+
+
+        </div>
+
+
+
+
+
+        <!-- MESSAGE 2 -->
+
+
+
+        <div class="message-row">
+
+
+
+          <div class="icon-circle">
+
+            👥
+
+          </div>
+
+
+
+          <p>
+
+
+
+            Your
+
+            <strong>Council Rep</strong>
+
+            will be on site facilitating the survey
+
+            alongside our
+
+            <strong>Managers and TAs.</strong>
+
+
+
+          </p>
+
+
+
+        </div>
+
+
+
+
+
+        <!-- MESSAGE 3 -->
+
+
+
+        <div class="message-row">
+
+
+
+          <div class="icon-circle">
+
+            🗣️
+
+          </div>
+
+
+
+          <p>
+
+
+
+            Positive or negative —
+
+            we want to hear
+
+            <strong>what you really think.</strong>
+
+
+
+          </p>
+
+
+
+        </div>
+
+
+
+
+
+        <!-- HIGHLIGHT -->
+
+
+
+        <div class="message-row highlight">
+
+
+
+          <div class="icon-circle">
+
+            💡
+
+          </div>
+
+
+
+          <p>
+
+
+
+            Help shape the future of
+
+            <strong>Wimbledon</strong>
+
+            and make a real difference.
+
+
+
+          </p>
+
+
+
+        </div>
+
+
+
+
+
+      </div>
+
+
+
+    </section>
+
+
+
+
+
+  </main>
+
+
+
+
+
+  <!-- FOOTER -->
+
+
+
+  <footer>
+
+
+
+
+
+    <div class="footer-item">
+
+
+
+      <div class="footer-icon">
+
+        👥
+
+      </div>
+
+
+
+      <div class="footer-text">
+
+
+
+        A GREAT PLACE
+
+        <br>
+
+        TO WORK
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div class="footer-item">
+
+
+
+      <div class="footer-icon">
+
+        💬
+
+      </div>
+
+
+
+      <div class="footer-text">
+
+
+
+        YOUR FEEDBACK
+
+        <br>
+
+        DRIVES CHANGE
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div class="footer-item">
+
+
+
+      <div class="footer-icon">
+
+        📊
+
+      </div>
+
+
+
+      <div class="footer-text">
+
+
+
+        LISTEN • ACT
+
+        <br>
+
+        MAKE A DIFFERENCE
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div class="footer-item">
+
+
+
+      <div class="footer-icon">
+
+        ☆
+
+      </div>
+
+
+
+      <div class="footer-text">
+
+
+
+        STRONGER
+
+        <br>
+
+        TOGETHER
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+
+
+    <div class="voice-footer">
+
+
+
+      VOICE+ 2026
+
+
+
+    </div>
+
+
+
+
+
+  </footer>
+
+
+
+
+
+</div>
+
+
+
+</body>
+
+</html>
